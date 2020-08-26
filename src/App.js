@@ -23,13 +23,11 @@ class App extends React.Component {
 
     render() {
         const { homeScreen } = this.state;
-        return (
-            <div>
-                <Home clickAction={this.setHomeScreenFalse}/>
-                <FullPage/>
-                {/*{homeScreen ? <Home clickAction={this.setHomeScreenFalse}/> : <FullPage/>}*/}
-            </div>
-        )
+        console.log(homeScreen);
+        return <div>
+            <Home homeScreen={homeScreen} clickAction={this.setHomeScreenFalse}/>
+            <FullPage homeScreen={homeScreen}/>
+        </div>
     }
 }
 

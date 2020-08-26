@@ -7,11 +7,13 @@ import './App.css';
 class Home extends React.Component {
 
     render() {
-        const { clickAction } = this.props;
+        const { clickAction, homeScreen } = this.props;
         return (
-            <div className="home-outer">
-                <div className={"home-inner"}>
-                    <img onClick={clickAction} className={"home-image"} src={cover}/>
+            <div className={homeScreen ? 'home' : 'full'}>
+                <div className="home-outer">
+                    <div className={"home-inner"}>
+                        <img onClick={clickAction} className={"home-image"} src={cover}/>
+                    </div>
                 </div>
             </div>
         );
